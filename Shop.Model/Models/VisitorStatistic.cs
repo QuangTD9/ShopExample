@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Shop.Model.Modelsss
+namespace Shop.Model.Models
 {
     [Table("VisitorStatistics")]
     public class VisitorStatistic

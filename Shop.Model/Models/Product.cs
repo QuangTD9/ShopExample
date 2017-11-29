@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Xml.Linq;
 
-namespace Shop.Model.Model
+namespace Shop.Model.Models
 {
     [Table("Products")]
     public class Product : Auditable
@@ -23,7 +23,8 @@ namespace Shop.Model.Model
 
         public string Image { set; get; }
 
-        public XElement MoreImages { set; get; }
+        [Column(TypeName = "xml")]
+        public string MoreImages { set; get; }
 
         public decimal Price { set; get; }
 
