@@ -7,7 +7,7 @@ namespace Shop.Data.Repository
 {
     public interface IProductCategoryRepository : IRepository<ProductCategories>
     {
-        IEnumerable<ProductCategories> GetByAlias(string alias);
+        
     }
 
     public class ProductCategoryRepository : RepositoryBase<ProductCategories>, IProductCategoryRepository
@@ -17,9 +17,6 @@ namespace Shop.Data.Repository
         {
         }
 
-        public IEnumerable<ProductCategories> GetByAlias(string alias)
-        {
-            return this.DbContext.ProductCategories.Where(x => x.Alias == alias);
-        }
+       
     }
 }
